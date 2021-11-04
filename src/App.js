@@ -18,7 +18,7 @@ function App() {
     const data = new FormData();
     data.append("file", file);
     await axios
-      .post("http://localhost:8000/single", data)
+      .post("https://fileupload-node.herokuapp.com/single", data)
       .then((res) => {
         console.log("Response: ", res.data.imagePath);
         setFilePath(res.data.imagePath);
