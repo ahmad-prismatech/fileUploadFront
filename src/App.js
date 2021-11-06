@@ -20,8 +20,8 @@ function App() {
     await axios
       .post("https://fileupload-node.herokuapp.com/single", data)
       .then((res) => {
-        console.log("Response: ", res.data.imagePath);
-        setFilePath(res.data.imagePath);
+        console.log("Response: ", res);
+        setFilePath(res.data.data.photo);
       })
       .catch((err) => console.log("Error: ", err.message));
   };
